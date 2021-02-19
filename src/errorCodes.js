@@ -1,114 +1,115 @@
-import { Platform } from 'react-native'
+import { Platform } from "react-native";
 
 const errorCodes = {
   busy: {
-    errorCode: 'busy',
-    description: 'Previous request is not completed',
+    errorCode: "busy",
+    description: "Previous request is not completed",
   },
   cancelled: {
-    errorCode: 'cancelled',
-    description: 'Cancelled by user',
+    errorCode: "cancelled",
+    description: "Cancelled by user",
   },
   purchaseCancelled: {
-    errorCode: 'purchaseCancelled',
-    description: 'Purchase was cancelled',
+    errorCode: "purchaseCancelled",
+    description: "Purchase was cancelled",
   },
   sourceStatusCanceled: {
-    errorCode: 'sourceStatusCanceled',
-    description: 'Cancelled by user',
+    errorCode: "sourceStatusCanceled",
+    description: "Cancelled by user",
   },
   sourceStatusPending: {
-    errorCode: 'sourceStatusPending',
-    description: 'The source has been created and is awaiting customer action',
+    errorCode: "sourceStatusPending",
+    description: "The source has been created and is awaiting customer action",
   },
   sourceStatusFailed: {
-    errorCode: 'sourceStatusFailed',
-    description: 'The source status is unknown. You shouldn\'t encounter this value.',
+    errorCode: "sourceStatusFailed",
+    description:
+      "The source status is unknown. You shouldn't encounter this value.",
   },
   sourceStatusUnknown: {
-    errorCode: 'sourceStatusUnknown',
-    description: 'Source polling unknown error',
+    errorCode: "sourceStatusUnknown",
+    description: "Source polling unknown error",
   },
   deviceNotSupportsNativePay: {
-    errorCode: 'deviceNotSupportsNativePay',
+    errorCode: "deviceNotSupportsNativePay",
     description: Platform.select({
-      ios: 'This device does not support Apple Pay',
-      android: 'This device does not support Google Pay',
+      ios: "This device does not support Apple Pay",
+      android: "This device does not support Google Pay",
     }),
   },
   noPaymentRequest: {
-    errorCode: 'noPaymentRequest',
-    description: 'Missing payment request',
+    errorCode: "noPaymentRequest",
+    description: "Missing payment request",
   },
   noMerchantIdentifier: {
-    errorCode: 'noMerchantIdentifier',
-    description: 'Missing merchant identifier',
+    errorCode: "noMerchantIdentifier",
+    description: "Missing merchant identifier",
   },
   noAmount: {
-    errorCode: 'noAmount',
-    description: 'Amount should be greater than 0',
+    errorCode: "noAmount",
+    description: "Amount should not be less than zero",
   },
   parseResponse: {
-    errorCode: 'parseResponse',
-    description: 'Failed to parse JSON',
+    errorCode: "parseResponse",
+    description: "Failed to parse JSON",
   },
   activityUnavailable: {
-    errorCode: 'activityUnavailable',
-    description: 'Cannot continue with no current activity',
+    errorCode: "activityUnavailable",
+    description: "Cannot continue with no current activity",
   },
   playServicesUnavailable: {
-    errorCode: 'playServicesUnavailable',
-    description: 'Play services are not available',
+    errorCode: "playServicesUnavailable",
+    description: "Play services are not available",
   },
   redirectCancelled: {
-    errorCode: 'redirectCancelled',
-    description: 'Redirect cancelled',
+    errorCode: "redirectCancelled",
+    description: "Redirect cancelled",
   },
   redirectNoSource: {
-    errorCode: 'redirectNoSource',
-    description: 'Received redirect uri but there is no source to process',
+    errorCode: "redirectNoSource",
+    description: "Received redirect uri but there is no source to process",
   },
   redirectWrongSourceId: {
-    errorCode: 'redirectWrongSourceId',
-    description: 'Received wrong source id in redirect uri',
+    errorCode: "redirectWrongSourceId",
+    description: "Received wrong source id in redirect uri",
   },
   redirectCancelledByUser: {
-    errorCode: 'redirectCancelledByUser',
-    description: 'User cancelled source redirect',
+    errorCode: "redirectCancelledByUser",
+    description: "User cancelled source redirect",
   },
   redirectFailed: {
-    errorCode: 'redirectFailed',
-    description: 'Source redirect failed',
+    errorCode: "redirectFailed",
+    description: "Source redirect failed",
   },
 
   // Description provided by stripe api
   api: {
-    errorCode: 'api',
+    errorCode: "api",
   },
   apiConnection: {
-    errorCode: 'apiConnection',
+    errorCode: "apiConnection",
   },
   redirectSpecific: {
-    errorCode: 'redirectSpecific',
+    errorCode: "redirectSpecific",
   },
   card: {
-    errorCode: 'card',
+    errorCode: "card",
   },
   invalidRequest: {
-    errorCode: 'invalidRequest',
+    errorCode: "invalidRequest",
   },
   stripe: {
-    errorCode: 'stripe',
+    errorCode: "stripe",
   },
   rateLimit: {
-    errorCode: 'rateLimit',
+    errorCode: "rateLimit",
   },
   authentication: {
-    errorCode: 'authentication',
+    errorCode: "authentication",
   },
   permission: {
-    errorCode: 'permission',
+    errorCode: "permission",
   },
-}
+};
 
-export default Object.freeze(errorCodes)
+export default Object.freeze(errorCodes);
